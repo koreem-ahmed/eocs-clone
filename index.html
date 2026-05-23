@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Egyptian Olympiad in Computational Science - Join the Future of Computational Science!">
+    <title>EOCS - Egyptian Olympiad in Computational Science</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/logo-animation.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <link rel="stylesheet" href="css/modern.css">
+</head>
+
+<body class="modern-page">
+    <!-- Particle Network Canvas Background -->
+    <canvas id="particle-network"></canvas>
+    <!-- Egyptian Theme Loader -->
+    <div class="loader-container">
+        <div class="loader-logo">
+            <img src="./assets/Logo.webp" alt="EOCS Logo">
+        </div>
+        <div class="loading-text">Welcome to EOCS</div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/animations.js"></script>
+    <script src="js/advanced-animations.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/mobile-menu.js"></script>
+
+    <script src="js/loader-init.js"></script>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <img src="./assets/ECOS logo - PROFILE COVER-05.svg" alt="EOCS Logo">
+            </div>
+            <button class="mobile-menu-btn" title="Toggle Menu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links desktop-nav">
+                <a href="index.html" class="active"><i class="fa-solid fa-house"
+                        style="margin-right:5px;font-size:1em;"></i>Home</a>
+                <a href="pages/about.html"><i class="fa-solid fa-circle-info"
+                        style="margin-right:5px;font-size:1em;"></i>About</a>
+                <a href="pages/eligibility.html"><i class="fa-solid fa-user-check"
+                        style="margin-right:5px;font-size:1em;"></i>Eligibility</a>
+                <a href="pages/prizes.html"><i class="fa-solid fa-trophy"
+                        style="margin-right:5px;font-size:1em;"></i>Prizes</a>
+                <a href="pages/partners.html"><i class="fa-solid fa-handshake"
+                        style="margin-right:5px;font-size:1em;"></i>Partners</a>
+                <a href="pages/contact.html"><i class="fa-solid fa-envelope"
+                        style="margin-right:5px;font-size:1em;"></i>Contact</a>
+                <a href="pages/auth/register.html" class="nav-register-btn"><i class="fa-solid fa-rocket nav-link-icon"></i>Register</a>
+            </div>
+            <div class="mobile-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/about.html">About</a>
+                <a href="pages/eligibility.html">Eligibility</a>
+                <a href="pages/prizes.html">Prizes</a>
+                <a href="pages/partners.html">Partners</a>
+                <a href="pages/contact.html">Contact</a>
+                <a href="pages/auth/register.html" class="nav-register-btn">Register</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-eyebrow">Season 2026</span>
+                <h1><span class="gold-text">EOCS</span>Egyptian Olympiad in<br>Computational Science</h1>
+                <hr class="hero-divider">
+                <p class="hero-subtitle">Empowering the next generation of <span class="highlight">scientists</span> and
+                    <span class="highlight">innovators</span>
+                </p>
+                <p class="hero-made-by">Join our community of passionate students and unlock your potential in
+                    computational physics, chemistry, biology, and mathematics.</p>
+
+                <div class="countdown-boxes">
+                    <div class="countdown-box">
+                        <div class="countdown-number days">00</div>
+                        <div class="countdown-label">DAYS</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number hours">00</div>
+                        <div class="countdown-label">HOURS</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number minutes">00</div>
+                        <div class="countdown-label">MINUTES</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number seconds">00</div>
+                        <div class="countdown-label">SECONDS</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="pages/auth/register.html" class="hero-button primary">
+                        <span class="btn-icon"><i class="fa-solid fa-rocket"></i></span>
+                        Join the Competition
+                        <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="pages/about.html" class="hero-button secondary">
+                        <span class="btn-icon"><i class="fa-regular fa-compass"></i></span>
+                        Learn More
+                        <span class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <span class="section-eyebrow">What we do</span>
+            <h2>ABOUT EOCS</h2>
+            <div class="about-text">
+                <p>The Egyptian Olympiad in Computational Science (EOCS) bridges Egypt's rich scientific heritage with
+                    cutting-edge computational innovation. We challenge students to solve complex scientific problems
+                    using modern computational methods.</p>
+            </div>
+            <div class="about-cards">
+                <div class="about-card">
+                    <div class="card-icon"><i class="fa-solid fa-atom"></i></div>
+                    <h3>PHYSICS COMPUTATION</h3>
+                    <p>Modeling Celestial Systems, Ising Model, Molecule Diffusion, and Particle Physics</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon"><i class="fa-solid fa-flask-vial"></i></div>
+                    <h3>CHEMICAL COMPUTATION</h3>
+                    <p>Modeling Molecular Geometry, Reaction Kinetics, and Drug Design</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon"><i class="fa-solid fa-dna"></i></div>
+                    <h3>BIOLOGICAL COMPUTATION</h3>
+                    <p>DNA Analysis, Machine Learning in Biology, Genomic and Evolutionary Analysis, and Molecular
+                        Docking</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+                    <h3>MATHEMATICAL COMPUTATION</h3>
+                    <p>Computing Systems of Linear Equations, Numerical Calculus, and Graph-Based Genomics</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Competition Structure -->
+        <section class="competition-structure" id="competition">
+            <span class="section-eyebrow">Your journey</span>
+            <h2>COMPETITION STRUCTURE</h2>
+            <p class="section-intro">Four stages from online qualifications to an onsite finals hackathon — designed to grow your computational science skills step by step.</p>
+            <div class="vtl">
+                <div class="vtl-item" data-step="01">
+                    <div class="vtl-card">
+                        <h3>ROUND 1: QUALIFICATIONS<span class="stage-type">Online · Individual</span></h3>
+                        <ul>
+                            <li><span class="label">Format:</span> Multiple-choice, short-answer theoretical questions, and basic coding exercises.</li>
+                            <li><span class="label">Focus:</span> Fundamental concepts in mathematics, physics, chemistry, biology, and programming.</li>
+                            <li><span class="label">Duration:</span> 1.5 hours</li>
+                            <li><span class="label">Advancement:</span> Top 10–30% qualify for Round 2 and gain access to optional training sessions.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="vtl-item" data-step="02">
+                    <div class="vtl-card">
+                        <h3>TRAINING PERIOD<span class="stage-type">Optional · Team-Based</span></h3>
+                        <ul>
+                            <li><span class="label">Format:</span> Daily sessions covering all five competition fields.</li>
+                            <li><span class="label">Duration:</span> 10 days, 1 session per day.</li>
+                            <li><span class="label">Focus:</span> Hands-on training in computational thinking, scientific modeling, and programming.</li>
+                            <li><span class="label">Structure:</span> Each field has two sessions for comprehensive coverage.</li>
+                            <li><span class="label">Purpose:</span> Prepare teams for advanced rounds with key computational techniques.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="vtl-item" data-step="03">
+                    <div class="vtl-card">
+                        <h3>ROUND 2: NATIONAL<span class="stage-type">Online · Team-Based</span></h3>
+                        <ul>
+                            <li><span class="label">Format:</span> Advanced problem-solving with written solutions, coding, and numerical simulations.</li>
+                            <li><span class="label">Focus:</span> Computational science applications using numerical methods, simulations, and data analysis.</li>
+                            <li><span class="label">Duration:</span> 2.5–3 hours</li>
+                            <li><span class="label">Scoring:</span> Professor grading on correctness, efficiency, and scientific accuracy.</li>
+                            <li><span class="label">Advancement:</span> Top 8–16 teams qualify for the Finals.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="vtl-item" data-step="04">
+                    <div class="vtl-card">
+                        <h3>ROUND 3: FINALS<span class="stage-type">Onsite · Hackathon · Team-Based</span></h3>
+                        <ul>
+                            <li><span class="label">Format:</span> Teams tackle open-ended computational challenges over 5–6 hours.</li>
+                            <li><span class="label">Focus:</span> Programming, simulations, and data science for scientific problems.</li>
+                            <li><span class="label">Judging criteria:</span></li>
+                        </ul>
+                        <ul class="sub-list">
+                            <li>Innovation (25%)</li>
+                            <li>Scientific Accuracy (25%)</li>
+                            <li>Algorithm Efficiency (25%)</li>
+                            <li>Presentation (25%)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners-section modern-partners">
+            <span class="section-eyebrow">Collaborators</span>
+            <h2>PARTNERS & SPONSORS</h2>
+            <p class="section-intro">EOCS is powered by STEM clubs across Egypt's October schools and open to new sponsors.</p>
+            <div class="partners-preview-grid">
+                <a href="https://www.stemcsclub.org" class="partner-preview-card" target="_blank" rel="noopener">
+                    <img src="assets/images/CSC.png" alt="STEM CS Club">
+                    <span>STEM CS Club</span>
+                </a>
+                <a href="https://www.octoberbiologyclub.org" class="partner-preview-card" target="_blank" rel="noopener">
+                    <img src="assets/images/BiC.png" alt="October Biology Club">
+                    <span>Biology Club</span>
+                </a>
+                <a href="https://www.octphysicsclub.org" class="partner-preview-card" target="_blank" rel="noopener">
+                    <img src="assets/images/ChC.png" alt="October Chemistry Club">
+                    <span>Chemistry Club</span>
+                </a>
+                <a href="https://www.octphysicsclub.org" class="partner-preview-card" target="_blank" rel="noopener">
+                    <img src="assets/images/PhC.png" alt="October Physics Club">
+                    <span>Physics Club</span>
+                </a>
+                <a href="https://www.octphysicsclub.org" class="partner-preview-card" target="_blank" rel="noopener">
+                    <img src="assets/images/mathclub.png" alt="October Math Club">
+                    <span>Math Club</span>
+                </a>
+            </div>
+            <div class="partners-cta-row">
+                <div class="sponsor-card-modern">
+                    <h3>BECOME A SPONSOR</h3>
+                    <p>Partner with us to empower Egypt's next generation of computational scientists.</p>
+                    <a href="pages/contact.html" class="hero-button primary">
+                        <i class="fa-solid fa-envelope btn-icon"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+            <p class="partners-view-all">
+                <a href="pages/partners.html" class="hero-button secondary">
+                    View all partners <i class="fa-solid fa-arrow-right btn-arrow"></i>
+                </a>
+            </p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer modern-footer">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <img src="./assets/ECOS logo - PROFILE COVER-05.svg" alt="EOCS" class="footer-logo">
+                    <p>Egyptian Olympiad in Computational Science — bridging heritage and innovation for students across Egypt.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="pages/about.html">About EOCS</a></li>
+                        <li><a href="pages/eligibility.html">Eligibility</a></li>
+                        <li><a href="pages/prizes.html">Prizes</a></li>
+                        <li><a href="pages/partners.html">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Competition</h3>
+                    <ul>
+                        <li><a href="pages/auth/register.html">Register</a></li>
+                        <li><a href="index.html#competition">Structure</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/egyptocs" class="social-icon facebook" aria-label="Facebook"></a>
+                        <a href="https://whatsapp.com/channel/0029Vb5QNKSKAwEiegaoYF2B" class="social-icon whatsapp" aria-label="WhatsApp"></a>
+                        <a href="https://www.linkedin.com/company/eg-ocs/" class="social-icon linkedin" aria-label="LinkedIn"></a>
+                        <a href="https://www.instagram.com/eg_ocs/" class="social-icon instagram" aria-label="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Egyptian Olympiad in Computational Science. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/animations.js"></script>
+    <script src="js/advanced-animations.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/nav-scroll.js"></script>
+    <script src="js/timeline-reveal.js"></script>
+    <script src="js/background-symbols.js"></script>
+    <script src="js/particles.js"></script>
+</body>
+
+</html>
