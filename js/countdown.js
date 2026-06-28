@@ -80,7 +80,7 @@ class CountdownTimer {
 }
 
 // Set deadline to 2026 /05/20 at 12:00 Cairo time (UTC+3)
-const deadline = Date.UTC(2026, 5, 27, 9, 0, 0);
+const deadline = Date.UTC(2026, 5, 28, 0, 0, 0);
 // Initialize and start the countdown
 document.addEventListener('DOMContentLoaded', () => {
     const countdown = new CountdownTimer(deadline);
