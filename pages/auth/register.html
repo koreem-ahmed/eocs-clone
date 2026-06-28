@@ -17,8 +17,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/favicon-180x180.png">
   <link rel="manifest" href="../../assets/favicon/site.webmanifest">
-<base target="_blank">
-<base target="_blank">
+  <base target="_blank">
 </head>
 
 <body class="modern-page register-page">
@@ -318,6 +317,7 @@ function validatePassword(password) {
 ───────────────────────────── */
 function showFieldError(field, message) {
   const errorText = field.nextElementSibling;
+  if (!errorText || !errorText.classList.contains("error-text")) return;
   errorText.textContent = message;
   errorText.style.display = "block";
   field.classList.add("error");
@@ -325,6 +325,7 @@ function showFieldError(field, message) {
 
 function clearFieldError(field) {
   const errorText = field.nextElementSibling;
+  if (!errorText || !errorText.classList.contains("error-text")) return;
   errorText.textContent = "";
   errorText.style.display = "none";
   field.classList.remove("error");
@@ -375,15 +376,51 @@ form.addEventListener("submit", async function (e) {
 
   let isValid = true;
 
+  // Validate all required fields
   form.querySelectorAll("input[required], select[required]").forEach((field) => {
     if (!field.value.trim()) {
       showFieldError(field, "Required");
       isValid = false;
+    } else {
+      clearFieldError(field);
     }
   });
 
+  // Extra validations
+  const emailVal = document.getElementById("email").value.trim();
+  const phoneVal = document.getElementById("phone").value.trim();
+  const nationalIdVal = document.getElementById("nationalId").value.trim();
+  const birthdateVal = document.getElementById("birthdate").value;
+  const passwordVal = document.getElementById("password").value;
+  const confirmVal = document.getElementById("confirmPassword").value;
+
+  if (emailVal && !validateEmail(emailVal)) {
+    showFieldError(document.getElementById("email"), "Invalid email");
+    isValid = false;
+  }
+  if (phoneVal && !validatePhone(phoneVal)) {
+    showFieldError(document.getElementById("phone"), "Invalid Egyptian phone");
+    isValid = false;
+  }
+  if (nationalIdVal && !validateNationalId(nationalIdVal)) {
+    showFieldError(document.getElementById("nationalId"), "Must be 14 digits");
+    isValid = false;
+  }
+  if (birthdateVal && !validateBirthdate(birthdateVal)) {
+    showFieldError(document.getElementById("birthdate"), "Age must be 14–25");
+    isValid = false;
+  }
+  if (passwordVal && !validatePassword(passwordVal)) {
+    showFieldError(document.getElementById("password"), "Min 8 chars, 1 letter & 1 number");
+    isValid = false;
+  }
+  if (passwordVal !== confirmVal) {
+    showFieldError(document.getElementById("confirmPassword"), "Passwords do not match");
+    isValid = false;
+  }
+
   if (!isValid) {
-    showError("Fix errors first");
+    showError("Please fix the errors above");
     return;
   }
 
@@ -411,10 +448,14 @@ form.addEventListener("submit", async function (e) {
           });
           console.log("✅ Referral counted and email saved:", registrantEmail);
         } else {
-          console.warn("❌ Ambassador not found");
+          console.warn("❌ Ambassador not found for ID:", safeId);
         }
       } catch (err) {
+        // 🔥 CRITICAL: Surface Firebase errors so you know if rules block the field
         console.error("🔥 Firebase error:", err);
+        showError("Referral tracking failed: " + err.message);
+        setLoading(false);
+        return; // Stop submission if Firebase fails (optional: remove this line if you want to continue to Google Form anyway)
       }
 
       sessionStorage.removeItem("eocs_pending_referral");
@@ -447,7 +488,7 @@ form.addEventListener("submit", async function (e) {
     window.location.href = "../../index.html";
   } catch (err) {
     console.error(err);
-    showError("Something went wrong");
+    showError("Something went wrong. Please try again.");
   } finally {
     setLoading(false);
   }
