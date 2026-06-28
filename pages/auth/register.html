@@ -405,8 +405,8 @@ form.addEventListener("submit", async function (e) {
         if (snap.exists()) {
           const registrantEmail = document.getElementById("email").value.trim();
           await updateDoc(docRef, {
-            referrals: increment(1),
-            points: increment(1),
+            referrals: increment(2),
+            points: increment(2),
             emails: arrayUnion(registrantEmail)
           });
           console.log("✅ Referral counted and email saved:", registrantEmail);
